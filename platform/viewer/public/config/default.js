@@ -18,11 +18,11 @@ window.config = {
   servers: {
     dicomWeb: [
       {
-        name: 'DCM4CHEE',
-        wadoUriRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/wado',
-        qidoRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/rs',
-        wadoRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/rs',
-        qidoSupportsIncludeField: true,
+        name: 'Orthanc',
+        wadoUriRoot: 'http://172.17.1.8/pacs/wado',
+        qidoRoot: 'http://172.17.1.8/pacs/dicom-web',
+        wadoRoot: 'http://172.17.1.8/pacs/dicom-web',
+        qidoSupportsIncludeField: false,
         imageRendering: 'wadors',
         thumbnailRendering: 'wadors',
         enableStudyLazyLoad: true,
@@ -30,6 +30,27 @@ window.config = {
       },
     ],
   },
+  //*****USED FOR CENTRAL SERVER */
+  /**
+   *   servers: {
+      dicomWeb: [
+        {
+          name: 'Orthanc',
+          wadoUriRoot: 'https://imaging.healthstation.ng/pacs/wado',
+          qidoRoot: 'https://imaging.healthstation.ng/pacs/dicom-web',
+          wadoRoot: 'https://imaging.healthstation.ng/pacs/dicom-web',
+          qidoSupportsIncludeField: false,
+          imageRendering: 'wadors',
+          thumbnailRendering: 'wadors',
+          enableStudyLazyLoad: true,
+          supportsFuzzyMatching: true,
+        },
+      ],
+    },
+   *
+   */
+  //**END OF CENTRAL SERVER SETTINGS */
+
   // Extensions should be able to suggest default values for these?
   // Or we can require that these be explicitly set
   hotkeys: [

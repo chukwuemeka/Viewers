@@ -28,15 +28,6 @@ function Header(props) {
   useEffect(() => {
     const optionsValue = [
       {
-        title: t('About'),
-        icon: { name: 'info' },
-        onClick: () =>
-          show({
-            content: AboutContent,
-            title: t('OHIF Viewer - About'),
-          }),
-      },
-      {
         title: t('Preferences'),
         icon: {
           name: 'user',
@@ -78,7 +69,7 @@ function Header(props) {
 
           {children}
 
-          {hasLink && (
+          {/* {hasLink && (
             <Link
               className="header-btn header-studyListLinkSection"
               to={{
@@ -88,7 +79,7 @@ function Header(props) {
             >
               {t(linkText)}
             </Link>
-          )}
+          )} */}
         </div>
 
         <div className="header-menu">
@@ -115,8 +106,8 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  useLargeLogo: false,
-  children: OHIFLogo(),
+  useLargeLogo: false
+  //children: OHIFLogo(),
 };
 
 export default withTranslation(['Header', 'AboutModal'])(
